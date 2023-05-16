@@ -1,6 +1,6 @@
 import './Signup.css';
-// import fitness from ".assets/fitnesstracker.gif.png";
-// import logo from "./assets/fitnesslogo.png"
+import fitness from "./assets/fitnesstracker.png";
+import logo from "./assets/logo.png"
 
 import React from 'react'
 
@@ -12,7 +12,7 @@ function Signup() {
 
             <div className='container_form'>
             <div className='logo'>
-              <img src="https://e7.pngegg.com/pngimages/485/781/png-clipart-finger-logo-chess-illustration-human-gym-t-shirt-design-blue-white-thumbnail.png" alt="" />
+              <img src={logo} alt="" width={130} height={120}/>
             </div>
             <div className='heading'>Log in</div>
 
@@ -20,7 +20,7 @@ function Signup() {
 
 
             <div className='container_img'>
-                {/* <img src={fitness} alt=""/> */}
+                <img src={fitness} alt="aa"/>
             </div>
 
         </div>
