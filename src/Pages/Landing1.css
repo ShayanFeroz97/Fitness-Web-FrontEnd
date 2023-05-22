@@ -1,0 +1,158 @@
+.landing1_main{
+    display: flex;
+    width: 100%;
+    height: 95vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing1_container{
+    display: flex;
+    width: 73%;
+    height: 70vh;
+}
+
+.landing1_main_content{
+    width: 30%;
+    height: 60vh;
+    margin-top: 25px;
+}
+
+.landing1_main_heading{
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.landing1_main_heading1{
+    color: black;
+}
+
+.landing1_main_heading2{
+    color: rgb(64, 103, 244);
+}
+
+.landing1_main_heading3{
+    color: black;
+}
+
+.landing1_main_para{
+    color:  gray;
+    font-size: small;
+}
+
+
+.landing1_main_buttons{
+    display: flex;
+    gap: 20px;
+}
+
+.btn1{
+color: white;
+background-color:rgb(64, 103, 244) ;
+padding: 15px;
+font-size: small;
+border: 1px solid rgb(64, 103, 244);
+cursor: pointer;
+}
+
+.btn2{
+    color: rgb(64, 103, 244);
+    background-color:white ;
+    border: 1px solid rgb(64, 103, 244);
+    padding: 15px;
+    font-size: small;
+    cursor: pointer;
+}
+
+.landing1_main_img{
+    width: 70%;
+    height: 70vh;
+}
+
+.landing1_main_img > img{
+    height: 360px;
+    margin-left: 112px;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 400px){
+    .landing1_main{
+        display: flex;
+        width: 100%;
+        height: 95vh;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .landing1_container {
+        display: flex;
+        width: 60%;
+        height: 70vh;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+    
+    .landing1_main_content {
+        width: 115%;
+        height: 70vh;
+        margin-top: 0px;
+    }
+    
+    .landing1_main_heading{
+        font-size: xx-large;
+        font-weight: bold;
+    }
+    
+    .landing1_main_heading1{
+        color: black;
+    }
+    
+    .landing1_main_heading2{
+        color: rgb(64, 103, 244);
+    }
+    
+    .landing1_main_heading3{
+        color: black;
+    }
+    
+    .landing1_main_para{
+        color:  gray;
+        font-size: small;
+    }
+    
+    
+    .landing1_main_buttons{
+        display: flex;
+        gap: 20px;
+    }
+    
+    .btn1{
+    color: white;
+    background-color:rgb(64, 103, 244) ;
+    padding: 15px;
+    font-size: small;
+    border: 1px solid rgb(64, 103, 244);
+    cursor: pointer;
+    }
+    
+    .btn2{
+        color: rgb(64, 103, 244);
+        background-color:white ;
+        border: 1px solid rgb(64, 103, 244);
+        padding: 15px;
+        font-size: small;
+        cursor: pointer;
+    }
+    
+    .landing1_main_img{
+        width: 70%;
+        height: 70vh;
+    }
+    
+    .landing1_main_img > img {
+        height: 145px;
+        margin-left: 0px;
+        margin-top: 40px;
+        border-radius: 0px;
+    }
+}

@@ -1,0 +1,14 @@
+.Landing2_main {
+  width: 100%;
+}
+
+.Landing2_main_heading {
+  font-size: xx-large;
+  text-align: center;
+}
+
+.Landing2_main_para{
+    font-size: small;
+    color: gray;
+    text-align: center;
+}

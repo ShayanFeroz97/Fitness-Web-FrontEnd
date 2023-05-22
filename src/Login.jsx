@@ -38,12 +38,13 @@ function Login() {
                 name="pwd"
               ></input>
               <div className="forget_pass">Forgot password ?</div>
-<br />
-<br />
+              <br />
+              <br />
               <button className="submit_btn">Submit</button>
-{/* <br /> */}
-              <div className="para1">Don't have an account ? <span className="para2">Register</span></div>
-
+              {/* <br /> */}
+              <div className="para1">
+                Don't have an account ? <span className="para2">Register</span>
+              </div>
             </div>
           </div>
           <div className="container_img">

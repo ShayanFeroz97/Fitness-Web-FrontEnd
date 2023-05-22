@@ -1,0 +1,243 @@
+.footer_main {
+  display: flex;
+  width: 100%;
+  height: 50vh;
+  background-color: rgb(0, 0, 0);
+  justify-content: center;
+  align-items: center;
+}
+
+.footerss {
+  display: flex;
+  justify-content: space-evenly;
+  width: 80%;
+  height: 40vh;
+}
+.footer1 {
+  display: grid;
+}
+
+.footer1_logo {
+  display: flex;
+  align-items: center;
+}
+.footer1_logo > img {
+  height: 100px;
+}
+
+.footer1_para {
+  font-size: small;
+  color: gray;
+  margin-top: 10px;
+}
+
+.footer1_links {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+.footer1_links > img {
+  height: 25px;
+  cursor: pointer;
+}
+
+.footer2 {
+  display: grid;
+}
+
+.footer2_heading {
+  display: flex;
+  color: white;
+  align-items: center;
+}
+
+.footer2_links {
+  color: gray;
+  font-size: small;
+  display: grid;
+  cursor: pointer;
+}
+
+.footer3 {
+  display: grid;
+}
+
+.footer3_heading {
+  display: flex;
+  color: white;
+  align-items: center;
+}
+
+.footer3_links {
+  color: gray;
+  font-size: small;
+  display: grid;
+  cursor: pointer;
+}
+
+.footer4 {
+  display: grid;
+}
+
+.footer4_heading {
+  display: flex;
+  color: white;
+  align-items: center;
+}
+
+.footer4_label{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.label{
+    padding: 8px;
+    border-radius: 5px;
+    font-size: small;
+}
+
+.footer4_btn {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.btn{
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: small;
+    color: white;
+    background-color: rgb(47, 99, 255);
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 500px){
+    .footer_main {
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(0, 0, 0);
+        justify-content: center;
+        align-items: center;
+    }
+      
+      .footerss {
+        display: flex;
+        justify-content: space-evenly;
+        width: 80%;
+        height: 90vh;
+        flex-direction: column;
+    }
+    .footer1 {
+        display: grid;
+        justify-content: start;
+        justify-items: center;
+        gap: 25px;
+    }
+      .footer1_logo {
+        display: flex;
+        align-items: center;
+      }
+      .footer1_logo > img {
+        height: 100px;
+      }
+      
+      .footer1_para {
+        font-size: small;
+        color: gray;
+        margin-top: 10px;
+      }
+      
+      .footer1_links {
+        display: flex;
+        justify-content: flex-start;
+        gap: 15px;
+      }
+      
+      .footer1_links > img {
+        height: 25px;
+        cursor: pointer;
+      }
+      
+      .footer2 {
+        display: grid;
+        gap: 20px;
+    }
+      
+      .footer2_heading {
+        display: flex;
+        color: white;
+        align-items: center;
+      }
+      
+      .footer2_links {
+        color: gray;
+        font-size: small;
+        display: grid;
+        cursor: pointer;
+        gap: 5px;
+      }
+      
+      .footer3 {
+        display: grid;
+        gap: 20px;
+      }
+      
+      .footer3_heading {
+        display: flex;
+        color: white;
+        align-items: center;
+      }
+      
+      .footer3_links {
+        color: gray;
+        font-size: small;
+        display: grid;
+        cursor: pointer;
+        gap: 5px;
+      }
+      
+      .footer4 {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        gap: 20px;
+    }
+      
+      .footer4_heading {
+        display: flex;
+        color: white;
+        align-items: center;
+      }
+      
+      .footer4_label{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+      
+      .label{
+          padding: 8px;
+          border-radius: 5px;
+          font-size: small;
+      }
+      
+      .footer4_btn {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+      }
+      
+      .btn{
+          padding: 5px 15px;
+          border-radius: 5px;
+          font-size: small;
+          color: white;
+          background-color: rgb(47, 99, 255);
+          cursor: pointer;
+      }
+}
