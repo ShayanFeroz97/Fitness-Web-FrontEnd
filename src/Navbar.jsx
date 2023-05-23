@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "./assets/logo.png"
+import Forms from "./Form";
 import "./Navbar.css";
 
 function Navbar() {
@@ -15,8 +16,7 @@ function Navbar() {
       <div className="Links_main">
         <div>Home</div>
         <div>About</div>
-        <div>Course</div>
-        <div>Events</div>
+      <Forms/>
         <div className="logout_btn">Log out</div>
       </div>
     </div>

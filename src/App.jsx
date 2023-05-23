@@ -5,16 +5,18 @@ import Landing1 from "./Pages/Landing1";
 import Landing2 from "./Pages/Landing2";
 import Footer from "./Footer";
 import Cards from "./Cards";
+import Form  from "./Form";
 
 function App() {
   return (
     <div className="App">
-      <Register/>
-      {/* <Login/>
+      {/* <Register/> */}
+      {/* <Login/> */}
       <Navbar/>
-      <Landing1/> */}
-      {/* <Landing2/> */}
-      {/* <Cards/> */}
+      {/* <Landing1/> */}
+      <Landing2/>
+      <Cards/>
+      {/* <Form/> */}
       <br />
       <br />
       <br />
