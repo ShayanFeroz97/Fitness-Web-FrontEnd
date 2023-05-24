@@ -67,71 +67,32 @@
   border-bottom: solid black 1px;
 }
 
-@media only screen and (max-width: 500px) {
+
+@media screen and (max-width: 600px) {
   .Navbar_container {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: nowrap;
-    align-content: center;
-    flex-direction: column;
-    background-color: white;
-    z-index: 100;
-    /* font-family: 'Trebuchet MS'; */
-    box-shadow: 0 2px 8px -5px black;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 25vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      /* flex-wrap: nowrap; */
+      align-content: center;
+      flex-direction: column;
+      background-color: white;
+      z-index: 100;
+      /* font-family: 'Trebuchet MS'; */
+      box-shadow: 0 2px 8px -5px black;
   }
 
-  .logo_container > img {
-    height: 60px;
-    margin-top: 12px;
-    margin-bottom: 10px;
-  }
-
-  .Links {
-    color: black;
-    text-align: center;
-    display: flex;
-    gap: 10px;
-    letter-spacing: 2px;
-    cursor: pointer;
-    font-weight: 500;
-    flex-direction: column;
-    margin-bottom: 10px;
-  }
-
-  .logout_btn {
-    background-color: rgb(64, 103, 244);
-    padding: 4px;
-    color: white;
-    margin-bottom: 18px;
+  .logo_container {
+    height: 75px;
 }
+.logo_container > img {
+  height: 60px;
+  margin-top: 15px;
 }
-
-@media screen and (max-width: 400px) {
-  .Navbar_container {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 12vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: nowrap;
-    align-content: center;
-    flex-direction: column;
-    background-color: white;
-    z-index: 100;
-    /* font-family:'Trebuchet MS'; */
-    box-shadow: 0 2px 8px -5px black;
-  }
-
-  .logo_container > img {
-    height: 50px;
-    margin-top: 17px;
-  }
 
   .Links {
     display: flex;
@@ -152,23 +113,23 @@
     background-color: rgb(64, 103, 244);
     padding: 4px;
     color: white;
-    margin-bottom: 18px;
+    /* margin-bottom: 18px; */
 }
 
-  .Links_main {
-    display: flex;
-    height: 40px;
-    width: 40%;
-    align-items: center;
-    gap: 20px;
-    justify-content: space-evenly;
-    color: black;
-    text-align: center;
-    letter-spacing: 1px;
-    cursor: pointer;
-    font-size: small;
-    flex-direction: row;
-  }
+.Links_main {
+  display: flex;
+  height: 40px;
+  width: 90%;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-evenly;
+  color: black;
+  text-align: center;
+  letter-spacing: 1px;
+  cursor: pointer;
+  font-size: x-small;
+  flex-direction: row;
+}
 
   .Links:hover {
     display: flex;

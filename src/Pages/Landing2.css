@@ -12,3 +12,40 @@
     color: gray;
     text-align: center;
 }
+
+@media screen and (max-width: 300px){
+  .Landing2_main {
+    width: 100%;
+    margin-top: 400px;
+}
+  
+  .Landing2_main_heading {
+    font-size: xx-large;
+    text-align: center;
+  }
+  
+  .Landing2_main_para{
+      font-size: small;
+      color: gray;
+      text-align: center;
+  }
+}
+
+@media screen and (max-width: 800px){
+  .Landing2_main {
+    width: 100%;
+    margin-top: 400px;
+}
+  
+  .Landing2_main_heading {
+    font-size: xx-large;
+    text-align: center;
+  }
+  
+  .Landing2_main_para {
+    font-size: small;
+    color: gray;
+    text-align: center;
+    padding: 20px;
+}
+}

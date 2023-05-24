@@ -3,7 +3,6 @@ import "./Landing1.css";
 
 export default function Landing1() {
   return (
-    <div>
       <div className='landing1_main'>
         <div className='landing1_container'>
             <div className='landing1_main_content'>
@@ -17,9 +16,12 @@ export default function Landing1() {
                 <br />
                 <br />
                 <div className='landing1_main_para'>
-                   <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit</span>
-                   <span>Vero eaque ipsa vitae corporis molestiae ad asper</span>  
-                   <span> sapiente in Dolormaxime.</span>
+                   <div>Lorem ipsum dolor sit amet, consectetur adipisici</div>
+                   <div>Vero eaque ipsa vitae corporis molestiae ad asper</div>  
+                   <div>Sapiente in Dolormaxime.ipsa vitae corporis moler</div>
+                   <div>Tero eaque ipsa vitae corporis molestiae ad asper</div>  
+                   <div>Ro eaque ipsa vitae corporis molestiae ad.</div> 
+                   <div>Vero eaque ipsa vitae </div>   
                 </div>
                 <br />
                 <br />
@@ -33,6 +35,6 @@ export default function Landing1() {
             </div>
         </div>
       </div>
-    </div>
+   
   )
 }

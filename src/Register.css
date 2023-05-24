@@ -1,79 +1,70 @@
-.main {
+.register_main {
   width: 100%;
-  height: 100vh;
+  height: 105vh;
   background: #fafafa;
   background: linear-gradient(to right, #fafafa 0%, #c4c4c4 100%);
-  overflow-y: hidden;
 }
-.container {
+.register_container {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   width: 100%;
-  height: 97vh;
+  height: 100vh;
   justify-content: center;
   align-items: center;
 }
 
-.container_form_main {
+.register_container_form_main {
   justify-content: center;
   align-items: center;
   display: flex;
   flex-wrap: wrap;
   width: 50%;
-  height: 90vh;
+  height: 100vh;
 }
 
-.container_form {
+.register_container_form {
   background-color: rgb(245, 245, 245);
   box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.4) inset;
   width: 65%;
   align-items: center;
   margin-left: 100px;
-  height: 85vh;
+  height: 95vh;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.logo > img {
+.register_logo > img {
   height: 120px;
 }
 
-.heading {
+.register_heading {
   font-size: larger;
   font-weight: bolder;
   font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
 }
-.container_img {
+.register_container_img {
   display: flex;
   width: 50%;
-  height: 90vh;
+  height: 100vh;
   justify-content: center;
   align-items: center;
 }
 
-.container_img > img {
+.register_container_img > img {
   height: 500px;
-  margin-right: 70px;
+  margin-right: 100px;
 }
 
-.name_bar {
+.register_name_bar {
   padding: 8px;
   border: none;
   width: 60%;
   border-radius: 5px;
   font-size: small;
 }
-.mail_bar {
-  padding: 8px;
-  border: none;
-  width: 60%;
-  border-radius: 5px;
-  font-size: small;
-}
-
-.pass_bar {
+.register_mail_bar {
   padding: 8px;
   border: none;
   width: 60%;
@@ -81,7 +72,15 @@
   font-size: small;
 }
 
-.submit_btn {
+.register_pass_bar {
+  padding: 8px;
+  border: none;
+  width: 60%;
+  border-radius: 5px;
+  font-size: small;
+}
+
+.register_submit_btn {
   padding: 8px;
   border: none;
   width: 64%;
@@ -92,17 +91,17 @@
   cursor: pointer;
 }
 
-.submit_btn:hover {
+.register_submit_btn:hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.para1 {
+.register_para1 {
   margin-top: 8px;
   font-size: small;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-.para2 {
+.register_para2 {
   font-size: medium;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   color: rgb(28, 90, 215);
@@ -110,13 +109,13 @@
 }
 
 @media screen and (max-width: 400px) {
-  .main {
+  .register_main {
     width: 100%;
     height: 97vh;
     background: #fafafa;
     background: linear-gradient(to right, #fafafa 0%, #c4c4c4 100%);
   }
-  .container {
+  .register_container {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -125,7 +124,7 @@
     align-items: center;
   }
 
-  .container_form_main {
+  .register_container_form_main {
     justify-content: center;
     align-items: center;
     display: flex;
@@ -134,7 +133,7 @@
     height: 95vh;
   }
 
-  .container_form {
+  .register_container_form {
     background-color: rgb(245, 245, 245);
     box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.4) inset;
     width: 75%;
@@ -147,16 +146,16 @@
     justify-content: center;
   }
 
-  .logo > img {
+  .register_logo > img {
     height: 120px;
   }
 
-  .heading {
+  .register_heading {
     font-size: larger;
     font-weight: bolder;
     font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
   }
-  .container_img {
+  .register_container_img {
     display: none;
     width: 50%;
     height: 90vh;
@@ -164,28 +163,20 @@
     align-items: center;
   }
 
-  .container_img > img {
+  .register_container_img > img {
     display: none;
     height: 500px;
     margin-right: 50px;
   }
 
-  .name_bar {
+  .register_name_bar {
     padding: 8px;
     border: none;
     width: 60%;
     border-radius: 5px;
     font-size: small;
   }
-  .mail_bar {
-    padding: 8px;
-    border: none;
-    width: 60%;
-    border-radius: 5px;
-    font-size: small;
-  }
-
-  .pass_bar {
+  .register_mail_bar {
     padding: 8px;
     border: none;
     width: 60%;
@@ -193,7 +184,15 @@
     font-size: small;
   }
 
-  .submit_btn {
+  .register_pass_bar {
+    padding: 8px;
+    border: none;
+    width: 60%;
+    border-radius: 5px;
+    font-size: small;
+  }
+
+  .register_submit_btn {
     padding: 8px;
     border: none;
     width: 64%;
@@ -204,18 +203,18 @@
     cursor: pointer;
   }
 
-  .submit_btn:hover {
+  .register_submit_btn:hover {
     background-color: rgba(0, 0, 0, 0.5);
   }
 
-  .para1 {
+  .register_para1 {
     margin-top: 8px;
     font-size: small;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
       sans-serif;
   }
 
-  .para2 {
+  .register_para2 {
     font-size: medium;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
       sans-serif;
@@ -225,13 +224,13 @@
 }
 
 @media screen and (max-width: 1000px) {
-  .main {
+  .register_main {
     width: 100%;
     height: 97vh;
     background: #fafafa;
     background: linear-gradient(to right, #fafafa 0%, #c4c4c4 100%);
   }
-  .container {
+  .register_container {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -240,7 +239,7 @@
     align-items: center;
   }
 
-  .container_form_main {
+  .register_container_form_main {
     justify-content: center;
     align-items: center;
     display: flex;
@@ -249,7 +248,7 @@
     height: 95vh;
   }
 
-  .container_form {
+  .register_container_form {
     background-color: rgb(245, 245, 245);
     box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.4) inset;
     width: 75%;
@@ -262,16 +261,16 @@
     justify-content: center;
   }
 
-  .logo > img {
+  .register_logo > img {
     height: 120px;
   }
 
-  .heading {
+  .register_heading {
     font-size: larger;
     font-weight: bolder;
     font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
   }
-  .container_img {
+  .register_container_img {
     display: none;
     width: 50%;
     height: 90vh;
@@ -279,28 +278,20 @@
     align-items: center;
   }
 
-  .container_img > img {
+  .register_container_img > img {
     display: none;
     height: 500px;
     margin-right: 50px;
   }
 
-  .name_bar {
+  .register_name_bar {
     padding: 8px;
     border: none;
     width: 60%;
     border-radius: 5px;
     font-size: small;
   }
-  .mail_bar {
-    padding: 8px;
-    border: none;
-    width: 60%;
-    border-radius: 5px;
-    font-size: small;
-  }
-
-  .pass_bar {
+  .register_mail_bar {
     padding: 8px;
     border: none;
     width: 60%;
@@ -308,7 +299,15 @@
     font-size: small;
   }
 
-  .submit_btn {
+  .register_pass_bar {
+    padding: 8px;
+    border: none;
+    width: 60%;
+    border-radius: 5px;
+    font-size: small;
+  }
+
+  .register_submit_btn {
     padding: 8px;
     border: none;
     width: 64%;
@@ -319,18 +318,18 @@
     cursor: pointer;
   }
 
-  .submit_btn:hover {
+  .register_submit_btn:hover {
     background-color: rgba(0, 0, 0, 0.5);
   }
 
-  .para1 {
+  .register_para1 {
     margin-top: 8px;
     font-size: small;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
       sans-serif;
   }
 
-  .para2 {
+  .register_para2 {
     font-size: medium;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
       sans-serif;
