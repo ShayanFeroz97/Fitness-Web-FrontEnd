@@ -5,32 +5,38 @@ import Landing1 from "./Pages/Landing1";
 import Landing2 from "./Pages/Landing2";
 import Footer from "./Footer";
 import Cards from "./Cards";
-import Form  from "./Form";
+import { useEffect } from "react";
+import axios from "axios";
 
 function App() {
+  useEffect(() => {
+    // (async function () {
+    //   const token = localStorage.getItem("token");
+    //   await axios.get("http://localhost:8080/protected", {
+    //     headers: { Authorization: `Bearer ${token}` },
+    //   });
+    // });
+  }, []);
   return (
     <div className="App">
-      {/* <Register/> */}
+      <Navbar />
+      <br />
+      <br />
+
+      <Landing1 />
+      <br />
+      <Landing2 />
       <br />
       <br />
       <br />
       <br />
-      {/* <Login/> */}
-      <Navbar/>
-      <Landing1/>
-      <br />
-      <Landing2/>
-      <br />
-      <br />
-      <br />
-      <br />
-      <Cards/>
+      <Cards />
       {/* <Form/> */}
       <br />
       <br />
       <br />
 
-      <Footer/>
+      <Footer />
     </div>
   );
 }
