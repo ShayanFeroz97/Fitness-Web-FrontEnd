@@ -7,7 +7,6 @@ import React, { useState } from "react";
 import axios from "axios";
 
 function Login() {
-
   const [formState, setFormState] = useState("login");
   const [value, setValues] = useState({
     username: "",
@@ -30,7 +29,8 @@ function Login() {
       if (status === 201) {
         localStorage.setItem("Token", token);
         localStorage.setItem("RefreshToken", refreshToken);
-        navigate("/");
+        // eslint-disable-next-line no-restricted-globals
+        location.replace("/");
       }
     } catch (err) {
       alert(err.message);
@@ -54,32 +54,42 @@ function Login() {
               <br />
 
               <input
-              name="email"
-              value={value.email}
-              onChange={handleChange}
-                // className="login_mail_bar"
+                name="email"
+                value={value.email}
+                onChange={handleChange}
+                className="login_mail_bar"
                 placeholder="Enter Your Email"
                 type="email"
-                // id="email"
+                id="email"
               />
 
               <br />
               <input
-              name="password"
-              value={value.password}
-              onChange={handleChange}
-                // className="login_pass_bar"
+                name="password"
+                value={value.password}
+                onChange={handleChange}
+                className="login_pass_bar"
                 placeholder="Enter Your Password"
                 type="password"
-                // id="pwd"
+                id="pwd"
               />
               <div className="login_forget_pass">Forgot password ?</div>
               <br />
-              <br />
-              <button className="login_submit_btn" onClick={handleSubmit}>Submit</button>
+              {/* <br /> */}
+              <button className="login_submit_btn" onClick={handleSubmit}>
+                Submit
+              </button>
               {/* <br /> */}
               <div className="login_para1">
-                Don't have an account ?  <span className="login_para2" onClick={()=>{navigate('/register')}} >Register</span>
+                Don't have an account ?{" "}
+                <span
+                  className="login_para2"
+                  onClick={() => {
+                    navigate('/register');
+                  }}
+                >
+                  Register
+                </span>
               </div>
             </div>
           </div>

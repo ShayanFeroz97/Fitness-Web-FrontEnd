@@ -155,7 +155,7 @@ export function EditForms({ cardData }) {
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>New Activity</Modal.Title>
+          <Modal.Title>Edit Activity</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form>

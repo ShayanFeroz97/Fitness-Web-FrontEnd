@@ -26,9 +26,11 @@ function Register() {
         data: { token, refreshToken },
       } = await axios.post(`http://localhost:8080/${formState}`, value);
       if (status === 201) {
-        localStorage.setItem("Token", token);
-        localStorage.setItem("RefreshToken", refreshToken);
-        navigate("/login");
+        // localStorage.setItem("Token", token);
+        // localStorage.setItem("RefreshToken", refreshToken);
+       
+        // eslint-disable-next-line no-restricted-globals
+        location.replace("/");
       }
     } catch (err) {
       alert(err.message);
@@ -46,9 +48,9 @@ function Register() {
               </div>
 
               <br />
-              <br />
+              {/* <br /> */}
               <div className="register_heading">Register</div>
-              <br />
+              {/* <br /> */}
               <br />
 
               <input
@@ -93,7 +95,7 @@ function Register() {
                 <span
                   className="login_para2"
                   onClick={() => {
-                    navigate("/login");
+                    navigate("/");
                   }}
                 >
                   Login

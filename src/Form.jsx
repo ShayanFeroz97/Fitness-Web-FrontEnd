@@ -3,6 +3,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
 import axios from "axios";
+import "./Form.css";
 
 export default function Forms() {
   const [show, setShow] = useState(false);
@@ -35,7 +36,7 @@ export default function Forms() {
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>New Activity</Modal.Title>
+          <Modal.Title>Add New Activity</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form>
@@ -116,3 +117,4 @@ export default function Forms() {
     </>
   );
 }
+
