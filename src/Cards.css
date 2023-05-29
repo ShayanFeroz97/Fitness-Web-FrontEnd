@@ -17,10 +17,43 @@
     margin: 5px;
     border-radius: 0px;
     font-size: small;
-    color: white;
-    background-color: rgb(47, 99, 255);
+    /* color: white;
+    background-color: rgb(47, 99, 255); */
     cursor: pointer;
 }
+
+.btn-secondary{
+    color: white !important;
+    background-color: rgb(64, 103, 244) !important;
+    cursor: pointer !important;
+    padding: 8px 18px !important;
+    margin: 5px !important;
+    border-radius: 0px !important;
+    font-size: small !important;
+    border: 1px solid rgb(64, 103, 244) !important;
+}
+
+.btn-secondary:hover{
+    background-color: black !important;
+    color: white !important;
+}
+
+.btn-primary{
+    color: rgb(64, 103, 244) !important;
+    background-color: white !important;
+    cursor: pointer !important;
+    padding: 8px 18px !important;
+    margin: 5px !important;
+    border-radius: 0px !important;
+    font-size: small !important;
+    border: 1px solid rgb(64, 103, 244) !important;
+}
+
+.btn-primary:hover{
+    background-color: black !important;
+    color: white !important;
+}
+
 .card-img-top{
     height: 20%;
 }

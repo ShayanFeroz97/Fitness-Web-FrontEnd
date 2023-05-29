@@ -6,9 +6,11 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Login from "./Login";
 import Register from "./Register";
 import Notfound from "./Notfound";
+import ContextProvider from "./context/Context.mjs";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-const Token = localStorage.getItem('Token') 
-
+const Token = localStorage.getItem("Token");
 
 export const routes1 = createBrowserRouter([
   // { path: "/", element: <Home /> },
@@ -42,14 +44,12 @@ export const routes2 = createBrowserRouter([
   },
 ]);
 
-
-
-
-
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={ Token ? routes2 : routes1} />
+    <ContextProvider>
+      <RouterProvider router={Token ? routes2 : routes1} />
+      <ToastContainer />
+    </ContextProvider>
   </React.StrictMode>
 );

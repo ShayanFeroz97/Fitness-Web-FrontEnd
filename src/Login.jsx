@@ -2,9 +2,11 @@ import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import fitness from "./assets/fitnessimg.png";
 import logo from "./assets/logo.png";
+import {  toast } from 'react-toastify';
 
 import React, { useState } from "react";
 import axios from "axios";
+import * as EmailValidator from "email-validator";
 
 function Login() {
   const [formState, setFormState] = useState("login");
@@ -13,6 +15,20 @@ function Login() {
     email: "",
     password: "",
   });
+  const [emailError, setEmailError] = useState("");
+  const [passwordError, setPasswordError] = useState("");
+
+  const notify = () => toast.success(' Login successfully!', {
+    position: "top-center",
+    autoClose: 2500,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+    });
+
 
   const navigate = useNavigate();
 
@@ -21,6 +37,32 @@ function Login() {
   };
 
   const handleSubmit = async () => {
+    if (value.email.trim() === "") {
+      setEmailError("Email can not be empty.");
+      return;
+    } else if (!EmailValidator.validate(value.email)) {
+      setEmailError("Please enter a valid email address");
+      return;
+    } else {
+      setEmailError("");
+    }
+
+    const passwordRegex = /^(?=.*\d)(?=.*[a-zA-Z])(?=.*[\W_]).{8,}$/;
+    if (value.password.trim() === "") {
+      setPasswordError("Password can not be empty.");
+      return;
+    } else if (value.password.length < 8) {
+      setPasswordError("Password must be at least 8 characters long.");
+      return;
+    } else if (!passwordRegex.test(value.password)) {
+      setPasswordError(
+        "Password must contain at least one letter, one number and one special character."
+      );
+      return;
+    } else {
+      setPasswordError("");
+    }
+
     try {
       const {
         status,
@@ -29,6 +71,7 @@ function Login() {
       if (status === 201) {
         localStorage.setItem("Token", token);
         localStorage.setItem("RefreshToken", refreshToken);
+        notify()
         // eslint-disable-next-line no-restricted-globals
         location.replace("/");
       }
@@ -59,9 +102,15 @@ function Login() {
                 onChange={handleChange}
                 className="login_mail_bar"
                 placeholder="Enter Your Email"
+                onKeyDown={(event) => {
+                  if (event.keyCode === 32) {
+                    event.preventDefault();
+                  }
+                }}
                 type="email"
                 id="email"
               />
+              <p style={{ color: "red", fontSize: "12px" }}>{emailError}</p>
 
               <br />
               <input
@@ -69,11 +118,18 @@ function Login() {
                 value={value.password}
                 onChange={handleChange}
                 className="login_pass_bar"
+                onKeyDown={(event) => {
+                  if (event.keyCode === 32) {
+                    event.preventDefault();
+                  }
+                }}
                 placeholder="Enter Your Password"
                 type="password"
                 id="pwd"
               />
-              <div className="login_forget_pass">Forgot password ?</div>
+              <p style={{ color: "red", fontSize: "12px" }}>{passwordError}</p>
+
+              {/* <div className="login_forget_pass">Forgot password ?</div> */}
               <br />
               {/* <br /> */}
               <button className="login_submit_btn" onClick={handleSubmit}>
@@ -85,7 +141,7 @@ function Login() {
                 <span
                   className="login_para2"
                   onClick={() => {
-                    navigate('/register');
+                    navigate("/register");
                   }}
                 >
                   Register

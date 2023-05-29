@@ -4,6 +4,7 @@ import fitness from "./assets/fitnessimg.png";
 import logo from "./assets/logo.png";
 import React, { useState } from "react";
 import axios from "axios";
+import * as EmailValidator from "email-validator";
 
 function Register() {
   const [formState, setFormState] = useState("register");
@@ -12,6 +13,9 @@ function Register() {
     email: "",
     password: "",
   });
+  const [userNameError, setUserNameError] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [passwordError, setPasswordError] = useState("");
 
   const navigate = useNavigate();
 
@@ -20,6 +24,44 @@ function Register() {
   };
 
   const handleSubmit = async () => {
+    const usernameRegex = /^[A-Za-z]+( [A-Za-z]+)*$/;
+
+    if (value.username.trim() === "") {
+      setUserNameError("Username can not be empty.");
+      return;
+    } else if (!usernameRegex.test(value.username)) {
+      setUserNameError("Username must only contain alphabets.");
+      return;
+    } else {
+      setUserNameError("");
+    }
+
+    if (value.email.trim() === "") {
+      setEmailError("Email can not be empty.");
+      return;
+    } else if (!EmailValidator.validate(value.email)) {
+      setEmailError("Please enter a valid email address");
+      return;
+    } else {
+      setEmailError("");
+    }
+
+    const passwordRegex = /^(?=.*\d)(?=.*[a-zA-Z])(?=.*[\W_]).{8,}$/;
+    if (value.password.trim() === "") {
+      setPasswordError("Password can not be empty.");
+      return;
+    } else if (value.password.length < 8) {
+      setPasswordError("Password must be at least 8 characters long.");
+      return;
+    } else if (!passwordRegex.test(value.password)) {
+      setPasswordError(
+        "Password must contain at least one letter, one number and one special character."
+      );
+      return;
+    } else {
+      setPasswordError("");
+    }
+
     try {
       const {
         status,
@@ -28,7 +70,7 @@ function Register() {
       if (status === 201) {
         // localStorage.setItem("Token", token);
         // localStorage.setItem("RefreshToken", refreshToken);
-       
+
         // eslint-disable-next-line no-restricted-globals
         location.replace("/");
       }
@@ -62,6 +104,7 @@ function Register() {
                 type="text"
                 id="name"
               />
+              <p style={{ color: "red", fontSize: "12px" }}>{userNameError}</p>
 
               <br />
               <input
@@ -69,10 +112,16 @@ function Register() {
                 onChange={handleChange}
                 className="register_mail_bar"
                 placeholder="Enter Your Email"
+                onKeyDown={(event) => {
+                  if (event.keyCode === 32) {
+                    event.preventDefault();
+                  }
+                }}
                 type="email"
                 id="email"
                 name="email"
               />
+              <p style={{ color: "red", fontSize: "12px" }}>{emailError}</p>
 
               <br />
               <input
@@ -83,7 +132,14 @@ function Register() {
                 type="password"
                 id="pwd"
                 name="password"
+                onKeyDown={(event) => {
+                  if (event.keyCode === 32) {
+                    event.preventDefault();
+                  }
+                }}
               />
+              <p style={{ color: "red", fontSize: "12px" }}>{passwordError}</p>
+
               <br />
               {/* <br /> */}
               <button className="register_submit_btn" onClick={handleSubmit}>
