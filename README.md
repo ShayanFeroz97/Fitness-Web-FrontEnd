@@ -60,7 +60,7 @@ The project follows a standard folder structure:
 
 ### Register Page 
 
-![App Screenshot](hhttps://res.cloudinary.com/dn7vh30yd/image/upload/v1685460699/Register_r0ejhg.png)
+![App Screenshot](https://res.cloudinary.com/dn7vh30yd/image/upload/v1685460699/Register_r0ejhg.png)
 
 ### Home Page
 
