@@ -1,70 +1,93 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Logo](https://res.cloudinary.com/dn7vh30yd/image/upload/v1685461773/getfit_club-high-resolution-logo-color-on-transparent-background_yyofoe.png)
+# Exercise Tracker (Frontend) 
 
-## Available Scripts
+The Exercise Tracker web app for exercise tracking is designed to help users manage their workout routines and track their progress. The app incorporates the basic CRUD operations, which stand for Create, Read, Update, and Delete, allowing users to perform essential actions on their exercises.
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Login:** Users can log in to their accounts using their credentials to access their exercise routine.
+- **Signup:** New users can create an account by signing up with their email address and password.
+- **Add Activity:** Users can add new exercise activities by providing relevant details such as exercise type, duration, and date.
+- **Edit Activity:** Users can edit activities by providing relevant details such as exercise type, duration, and date.
+- **Exercise Details:** Users can view the details of their exercises, including the exercise type, duration, and date.
+- **Logout:** Users can securely log out of their accounts to protect their session.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Technologies Used
 
-### `npm run eject`
+The Exercise Tracker(Frontend) is built using the following technologies:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- React JS 
+- React bootstrap
+- Context API
+- Reacr Router Dom 
+- Node Js 
+- Express 
+- MongoDB 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Getting Started
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To get started with the Exercise Tracking App, follow these steps:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Clone the repository: `git clone https://github.com/ShayanFeroz97/Fitness-Web-FrontEnd.git`
+2. Install the dependencies: `npm install`
+3. Start the development server: `npm run dev`
 
-## Learn More
+## Folder Structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The project follows a standard folder structure:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- `src`: Contains the source code files for the frontend React application.
+  - `components`: Includes reusable components used throughout the app.
+  - `screens`: Contains the screen components for login, signup, and home.
+  - `context`: Contains the contexts 
+  - `assets`: Contains All the images and other assets 
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## UI Design
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Login Page
 
-### Making a Progressive Web App
+![App Screenshot](https://res.cloudinary.com/dn7vh30yd/image/upload/v1685460699/Login_xf4dci.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Register Page 
 
-### Advanced Configuration
+![App Screenshot](hhttps://res.cloudinary.com/dn7vh30yd/image/upload/v1685460699/Register_r0ejhg.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Home Page
 
-### Deployment
+![App Screenshot](https://res.cloudinary.com/dn7vh30yd/image/upload/v1685460698/Home_kdx6ix.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Landing1 Page
 
-### `npm run build` fails to minify
+![App Screenshot](https://res.cloudinary.com/dn7vh30yd/image/upload/v1685460698/Landing1_tbaubw.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Add Activity Modal
+
+![App Screenshot](https://res.cloudinary.com/dn7vh30yd/image/upload/v1685460698/Add_Activity_Modal_rdqr0p.png)
+
+### Edit Activity Modal
+
+![App Screenshot](https://res.cloudinary.com/dn7vh30yd/image/upload/v1685460698/Edit_Activity_Modal_evyqgs.png)
+
+### Cards Page
+
+![App Screenshot](https://res.cloudinary.com/dn7vh30yd/image/upload/v1685460698/Cards_crvnhn.png)
+
+### Confirmation Modal 
+
+![App Screenshot](https://res.cloudinary.com/dn7vh30yd/image/upload/v1685460697/Confirmation_Modal_bb0fqx.png)
+
+### Footer 
+
+![App Screenshot](https://res.cloudinary.com/dn7vh30yd/image/upload/v1685460697/Footer_vajgrg.png)
+
+
