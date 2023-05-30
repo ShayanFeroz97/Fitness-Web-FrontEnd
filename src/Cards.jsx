@@ -5,6 +5,7 @@ import Gymactivities from "./assets/Gymactivities.png";
 import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
 import { GlobalContext } from "./context/Context.mjs";
+// import { toast } from "react-toastify";
 import "./Cards.css";
 
 function Cards() {
@@ -20,6 +21,17 @@ function Cards() {
     console.log(allWorkouts, data);
     // setAlldata(data);
   };
+
+  // const notify = () => toast.success(' Edit Activity Successfully!', {
+  //   position: "top-center",
+  //   autoClose: 2500,
+  //   hideProgressBar: false,
+  //   closeOnClick: true,
+  //   pauseOnHover: true,
+  //   draggable: true,
+  //   progress: undefined,
+  //   theme: "light",
+  //   });
 
   // const Delete = async (id) => {
   //   try {
@@ -248,12 +260,14 @@ export function EditForms({ cardData }) {
         `http://localhost:8080/data/${cardData._id}`,
         body
       );
+
       setAllWorkouts(
         allWorkouts.map((item) => {
           // console.log(item, allData, data, body);
           return item._id == cardData?._id ? data : item;
         })
       );
+      // notify()
       console.log(data);
     } catch (error) {
       alert(error);
@@ -283,6 +297,8 @@ export function EditForms({ cardData }) {
                 type="text"
                 placeholder="Exercise Title"
                 autoFocus
+                maxLength='20'
+
                 value={title}
                 onChange={(e) => {
                   setTitle(e.target.value);
@@ -295,6 +311,7 @@ export function EditForms({ cardData }) {
               <Form.Label>Description</Form.Label>
               <Form.Control
                 type="text"
+                maxLength='50'
                 placeholder="Exercise Description"
                 autoFocus
                 value={description}

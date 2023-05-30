@@ -69,9 +69,9 @@ function Login() {
         data: { token, refreshToken },
       } = await axios.post(`http://localhost:8080/${formState}`, value);
       if (status === 201) {
+        notify()
         localStorage.setItem("Token", token);
         localStorage.setItem("RefreshToken", refreshToken);
-        notify()
         // eslint-disable-next-line no-restricted-globals
         location.replace("/");
       }
@@ -98,6 +98,8 @@ function Login() {
 
               <input
                 name="email"
+                maxLength='20'
+
                 value={value.email}
                 onChange={handleChange}
                 className="login_mail_bar"
@@ -114,6 +116,7 @@ function Login() {
 
               <br />
               <input
+                maxLength='15'
                 name="password"
                 value={value.password}
                 onChange={handleChange}

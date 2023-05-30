@@ -4,6 +4,7 @@ import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
 import axios from "axios";
 import { GlobalContext } from "./context/Context";
+import { toast } from "react-toastify";
 import "./Form.css";
 
 export default function Forms() {
@@ -32,6 +33,17 @@ export default function Forms() {
     const formattedDate = `${year}-${month}-${day}`;
     return formattedDate;
   };
+
+  const notify = () => toast.success(' Added Activity Successfully!', {
+    position: "top-center",
+    autoClose: 2500,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+    });
 
   const SaveCard = async () => {
     const stringRegex = /^[A-Za-z]+( [A-Za-z]+)*$/;
@@ -89,6 +101,7 @@ export default function Forms() {
     try {
       const body = { title, description, type, duration, date };
       const { data } = await axios.post("http://localhost:8080/adddata", body);
+      notify()
       const WorkOutClone = allWorkouts.slice(0);
       WorkOutClone.push(data);
       setAllWorkouts(WorkOutClone);
@@ -118,6 +131,7 @@ export default function Forms() {
               <Form.Control
                 required="required"
                 type="text"
+                maxLength='20'
                 placeholder="Exercise Title"
                 autoFocus
                 value={title}
@@ -132,6 +146,7 @@ export default function Forms() {
               <Form.Label>Description</Form.Label>
               <Form.Control
                 type="text"
+                maxLength='50'
                 placeholder="Exercise Description"
                 autoFocus
                 value={description}

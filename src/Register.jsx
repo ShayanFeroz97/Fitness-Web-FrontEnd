@@ -97,6 +97,7 @@ function Register() {
 
               <input
                 name="username"
+                maxLength='20'
                 value={value.username}
                 onChange={handleChange}
                 className="register_name_bar"
@@ -109,6 +110,7 @@ function Register() {
               <br />
               <input
                 value={value.email}
+                maxLength='20'
                 onChange={handleChange}
                 className="register_mail_bar"
                 placeholder="Enter Your Email"
@@ -125,6 +127,7 @@ function Register() {
 
               <br />
               <input
+                maxLength='15'
                 value={value.password}
                 onChange={handleChange}
                 className="register_pass_bar"
